@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Local Storage Demonstration</title>
+<script type="text/javascript" src="LocalStorage.js"></script>
+<style type="text/css">
+span.highlight {
+	background-color: orange;
+}
+
+h3 {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align: center; background-color: blue">LogIN Page</h1>
+	<h3>
+		<button onClick="homeLogin()">Home LOGIN</button>
+		<button onClick="visitorLogin()">Visitor LOGIN</button>
+	</h3>
+	<div id="myDiv1" style="display: none">
+		<h3>
+			<span class="highlight">Enter Username: </span> : <input
+				id="myInput1" name="num" type="text" size="15"><br /> <span
+				class="highlight">Enter Password: </span> : <input id="myInput2"
+				name="num" type="text" size="15"><br />
+			<button onClick="validateCreditGuest()">ENTER!</button>
+		</h3>
+	</div>
+
+	<div id="myDiv2" style="display: none">
+		<h3>
+			<span class="highlight">Enter Username: </span> : <input
+				id="myInput3" name="num" type="text" size="15"><br /> <span
+				class="highlight">Enter Password: </span> : <input id="myInput4"
+				name="num" type="text" size="15"><br />
+			<button onClick="validateCreditHome()">ENTER!</button>
+		</h3>
+	</div>
+	<div id="myDiv3" style="display: none;">
+		<p id="demo1">
+		<h3><button onClick="goBack()">BACK</button></h3></h3>
+		</p>
+	</div>
+
+</body>
+</html>

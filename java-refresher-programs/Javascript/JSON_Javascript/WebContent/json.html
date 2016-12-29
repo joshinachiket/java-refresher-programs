@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Temperature Of Cities API</title>
+<style type="text/css">
+span.highlight {
+	background-color: orange;
+}
+select{
+	background-color: blue;
+	font-weight: bold;
+	font-style: italic;
+	size: 200;
+	text-align: justify;
+}
+h3.high {
+	text-align: center;
+	background-color: yellow;
+}
+</style>
+</head>
+<body>
+<h3 style="text-align: left;"><span class="highlight"> Select The City you want to know the temperature of: </span></h3>
+
+	<select id="db1" onchange="findTemp()" name="cities">
+		<option value="sanjose">San Jose</option>
+		<option value="sanfranscisco">San Franscisco</option>
+		<option value="london">London</option>
+	</select>
+	<br>
+	<br>
+	<h3 class="high"><div id="myDiv1"></div></h3>
+
+	<script>
+		var req = XMLHttpRequest();
+
+		function findTemp() {
+			document.getElementById("db1").value
+			var file_name = "http://api.openweathermap.org/data/2.5/weather?q="
+					+ document.getElementById("db1").value
+					+ "&APPID=01ddad169cbd8bfd314a9f6aa4c76214";
+			req.open("GET", file_name, true);
+			req.send(null);
+		}
+
+		req.onreadystatechange = function() {
+			if (req.readyState == 4 && req.status == 200) {
+				var student_array = JSON.parse(req.responseText);
+				display_info(student_array);
+			}
+		}
+
+		function display_info(student_array) {
+			document.getElementById("myDiv1").innerHTML += "City Name: "
+					+ student_array.name + " Temperature in FH: "
+					+ student_array.main.temp + "<br><br>";
+		}
+	</script>
+</body>
+</html>

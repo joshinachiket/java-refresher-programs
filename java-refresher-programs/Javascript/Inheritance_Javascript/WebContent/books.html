@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Books Arrangements</title>
+<script type="text/javascript" src="books.js"></script>
+<style type="text/css">
+P{
+word-spacing: 30px;
+}
+</style>
+</head>
+
+<body>
+	<h3>Select Subject</h3>
+	<div id="myDiv1">
+		<input id="myInput1" type="radio" name="book" value="Physics" onclick=phyClick(this)>Physics<br> <br>
+		<div id="myDiv2" style="display: none; margin-left: 50px;">
+			<input id="myInp1" type="radio" name="physics" value="Experimental" />Experimental<br> <br> 
+			<input id="myInp2" type="radio" name="physics" value="Theoratical" />Theoratical<br> <br>
+		</div>
+		<input id="myInput2" type="radio" name="book" value="Maths" onchange=phyClick(this) /> Maths<br> <br>
+		<div id="myDiv3" style="display: none; margin-left: 50px;">
+			<input id="myInp3" type="radio" name="physics" value="Geometry" />Geometry<br><br> 
+			<input id="myInp4" type="radio" name="physics" value="Algebra" />Algebra<br> <br>
+		</div>
+	</div>
+	<form id="myForm1">
+	Book Name : <input name="bname" type="text" size="20"><br/><br/>
+	Author Name : <input name="aname" type="text" size="20"><br/><br/>
+	</form>
+	<button onClick="display()">Display!</button>
+	<p id="demo"></p>
+
+</body>
+</html>

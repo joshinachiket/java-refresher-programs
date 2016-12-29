@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Traffic Control Desk</title>
+<script type="text/javascript" src="trafficControl.js">
+</script>
+<style type="text/css">
+.go_tag {
+	background-color: white;
+	width: 200px;
+	text-align: center;
+}
+
+.stop_tag {
+	background-color: white;
+	width: 200px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="parent1" onmouseover=show1() onmouseout=hide1()>
+		<h1 id="head1" class="stop_tag">STOP</h1>
+		<div id="popup1" style="display: none">Make the count EVEN to GO</div>
+	</div>
+	<p id="demo1"></p>
+
+	<div id="parent2" onmouseover=show2() onmouseout=hide2()>
+		<h1 id="head2" class="go_tag">GO</h1>
+		<div id="popup2" style="display: none">Make the count ODD to
+			STOP</div>
+	</div>
+	<p id="demo2"></p>
+	<button onClick=count_clicks()>Click ME!</button>
+	<br>
+	<br> Count:
+	<input id="click_count" type="text" onchange=change_msg()>
+	<br>
+	<br>
+	<button onClick=resetCounter()>RESET!</button>
+</body>
+</html>

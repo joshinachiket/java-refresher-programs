@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Understanding Strict Mode</title>
+<script type="text/javascript" src="Strict_Mode.js"></script>
+<style type="text/css">
+p.ClassOne {
+	text-align: left;
+	background-color: green;
+	font-weight: bold;
+}
+
+p.highlight {
+	text-align: left;
+	background-color: red;
+	font-weight: bold;
+}
+
+span.highlight {
+	background-color: orange;
+}
+
+h3 {
+	text-align: left;
+}
+
+button {
+	color: green;
+	background-color: black;
+}
+</style>
+</head>
+<body>
+	<h3>
+		<button onClick="useStrict()">With STRICT mode</button>
+		<button onClick="noStrict()">Without STRICT mode</button>
+	</h3>
+
+	<p id="demo1"></p>
+</body>
+</html>

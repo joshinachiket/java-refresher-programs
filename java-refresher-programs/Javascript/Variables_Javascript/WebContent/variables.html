@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Motion Variables</title>
+<script type="text/javascript" src="variables.js"></script>
+<style type="text/css">
+h3 {
+	text-align: center;
+	background-color: blue;
+}
+
+button {
+	color: green;
+	background-color: black;
+}
+
+span.highlight {
+	background-color: orange;
+}
+
+p.ClassOne {
+	text-align: left;
+	background-color: green;
+	font-weight: bold;
+}
+
+p.highlight {
+	text-align: left;
+	background-color: red;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<h3>Motion Equations</h3>
+	<span class="highlight">Please Enter Initial Velocity (u)</span> : 
+	<input id="myInput1" name="num" type="number" size="15"><br />
+	<br>
+	<span class="highlight">Please enter time period </span> :
+	<input id="myInput2" name="num" type="number" size="15"><br />
+	<br>
+	<span class="highlight">Please enter acceleration</span> :
+	<input id="myInput3" name="num" type="number" size="15"><br />
+	<br>
+	<button onClick="calDis()">Calculate Distance (S)</button>
+	<button onClick="calVel()">Calculate Final Speed (V)</button>
+	<p id="demo1"></p>
+</body>
+</html>

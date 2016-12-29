@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>String Manipulations</title>
+<script type="text/javascript" src="string_Manipulation.js"></script>
+<style type="text/css">
+p.ClassOne {
+	text-align: left;
+	background-color: green;
+	font-weight: bold;
+}
+
+p.highlight {
+	text-align: left;
+	background-color: red;
+	font-weight: bold;
+}
+
+span.highlight {
+	background-color: orange;
+}
+
+h3 {
+	text-align: left;
+}
+
+button {
+	color: green;
+	background-color: black;
+}
+</style>
+</head>
+<body onload="myFunction()">
+	<p class="ClassOne" id="demo1"></p>
+
+	<div id="myDiv1">
+
+		<h3>
+			<button onClick="replaceItems()">CTRL + F</button>
+		</h3>
+		<div id="myDiv2" style="display: none">
+			<h3>
+				<span class="highlight">Enter text: </span> : <input id="myInput1"
+					name="num" type="text" size="15"><br />
+				<button onClick="searchItems()">ENTER!</button>
+			</h3>
+		</div>
+	</div>
+	<p id="demo2"></p>
+
+	<div id="myDiv3" style="display: none">
+		<button onClick="replaceString()">ENTER STRING TO REPLACE!</button>
+		<input id="myInput2" name="num" type="text" size="15"><br />
+	</div>
+	<p id="demo3"></p>
+
+</body>
+</html>
